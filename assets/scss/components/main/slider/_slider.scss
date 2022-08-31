@@ -1,0 +1,54 @@
+.slider {
+  &__slides {
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+  }
+
+  &__slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+    /*
+      non-essential styles:
+      just for appearance; change whatever you want
+    */
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+
+    &:nth-of-type(1) {
+      background: red;
+    }
+
+    &:nth-of-type(2) {
+      background: orange;
+    }
+
+    &:nth-of-type(3) {
+      background: green;
+    }
+
+    &:nth-of-type(4) {
+      background: blue;
+    }
+
+    &:nth-of-type(5) {
+      background: purple;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}

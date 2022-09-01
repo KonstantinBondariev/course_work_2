@@ -27,6 +27,15 @@ function playSlideShow() {
   isPlaying = true;
   slideInterval = setInterval(nextSlide, 2000);
 }
+
+function playOrPausSlideShow() {
+  if (isPlaying) {
+    pauseSlideShow();
+  } else {
+    playSlideShow();
+  }
+}
+
 function nextSlide() {
   goToSlide(cureantSlide + 1);
 }
@@ -34,24 +43,6 @@ function nextSlide() {
 function prevSlide() {
   goToSlide(cureantSlide - 1);
 }
-
-pauseBtn.addEventListener('click', () => {
-  if (isPlaying) {
-    pauseSlideShow();
-  } else {
-    playSlideShow();
-  }
-});
-
-prevBtn.addEventListener('click', () => {
-  pauseSlideShow();
-  prevSlide();
-});
-
-nextBtn.addEventListener('click', () => {
-  pauseSlideShow();
-  nextSlide();
-});
 
 function goToIndicate(e) {
   const target = e.target;
@@ -64,6 +55,26 @@ function goToIndicate(e) {
   }
 }
 
+function pressKay(e) {
+  if (e.code === 'ArrowLeft') prevSlide();
+  if (e.code === 'ArrowRight') nextSlide();
+  if (e.code === 'Space') playOrPausSlideShow();
+}
+
+pauseBtn.addEventListener('click', playOrPausSlideShow);
+
+prevBtn.addEventListener('click', () => {
+  pauseSlideShow();
+  prevSlide();
+});
+
+nextBtn.addEventListener('click', () => {
+  pauseSlideShow();
+  nextSlide();
+});
+
 inicatorPanel.addEventListener('click', goToIndicate);
+
+document.addEventListener('keydown', pressKay);
 
 let slideInterval = setInterval(nextSlide, 2000);

@@ -4,15 +4,8 @@
 @use "common/classes";
 
 @use "components/header/header";
-@use "components/header/header-overlay";
-@use "components/header/header-menu";
-@use "components/header/header-logo";
-@use "components/header/header-navbar";
-@use "components/header/header-content";
-@use "components/sections/skills/skills";
-@use "components/sections/skills/skill-item";
-@use "components/sections/section-about";
-@use "components/sections/section-form";
-@use "components/sections/section-posts";
+
+@use "components/main/main";
+@use "components/main/slider/slider";
 
 @use "components/footer/footer";

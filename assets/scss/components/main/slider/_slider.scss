@@ -1,0 +1,105 @@
+@use '../../../mixins' as *;
+@use '../../../presets' as *;
+
+.slider {
+  &__slides {
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+  }
+
+  &__slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+    /*
+      non-essential styles:
+      just for appearance; change whatever you want
+    */
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+
+    &:nth-of-type(1) {
+      background: red;
+    }
+
+    &:nth-of-type(2) {
+      background: orange;
+    }
+
+    &:nth-of-type(3) {
+      background: green;
+    }
+
+    &:nth-of-type(4) {
+      background: blue;
+    }
+
+    &:nth-of-type(5) {
+      background: purple;
+    }
+
+    &:nth-of-type(6) {
+      background: yellow;
+    }
+  }
+  &__control-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1em;
+    color: #fff;
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: grey;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: rgb(173, 173, 173);
+    }
+  }
+  &__indicator-panel {
+    margin-top: 10px;
+    @include unlist;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__indicator {
+    width: 20px;
+    height: 20px;
+    border: #333 solid;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    &--active {
+      background-color: #333;
+    }
+    &:hover {
+      box-shadow: 0px 0px 10px 5px #333;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}

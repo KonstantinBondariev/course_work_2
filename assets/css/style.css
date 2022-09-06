@@ -165,7 +165,6 @@ template {
 [hidden] {
   display: none;
 }
-
 .slider__slides {
   position: relative;
 
@@ -211,6 +210,9 @@ template {
 }
 .slider__slide:nth-of-type(5) {
   background: purple;
+}
+.slider__slide:nth-of-type(6) {
+  background: yellow;
 }
 .slider__control-panel {
   display: -webkit-box;
@@ -262,8 +264,17 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-  gap: 30px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 10px;
 }
 .slider__indicator {
   width: 20px;

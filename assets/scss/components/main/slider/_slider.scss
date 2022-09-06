@@ -1,3 +1,6 @@
+@use '../../../mixins' as *;
+@use '../../../presets' as *;
+
 .slider {
   &__slides {
     position: relative;
@@ -45,6 +48,10 @@
     &:nth-of-type(5) {
       background: purple;
     }
+
+    &:nth-of-type(6) {
+      background: yellow;
+    }
   }
   &__control-panel {
     display: flex;
@@ -70,8 +77,11 @@
     }
   }
   &__indicator-panel {
+    margin-top: 10px;
+    @include unlist;
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    gap: 10px;
   }
   &__indicator {
     width: 20px;

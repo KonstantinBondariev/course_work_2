@@ -10,24 +10,115 @@
 </head>
 
 <body>
-  <header class="header"></header>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__menu">
+          <div class="header__logo">
+            <!-- <img src="assets/img/logo.png" alt="logo"> -->
+          </div>
+          <ul class="header__nav-bar">
+            <li><a href="#">Shop +</a></li>
+            <li><a href="#">Learn +</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+          <div class="header__cart">Cart (0)</div>
+          <div class="header__style"></div>
+        </div>
+      </div>
+    </header>
 
-  <main class="main">
-    <div class="slider">
-      <ul class="slider__slides">
-        <li class="slider__slide active">Slide 1</li>
-        <li class="slider__slide">Slide 2</li>
-        <li class="slider__slide">Slide 3</li>
-        <li class="slider__slide">Slide 4</li>
-        <li class="slider__slide">Slide 5</li>
-        <li class="slider__slide">Slide 6</li>
-      </ul>
+    <main class="main">
+      <div class="main__bg-img"></div>
+      <section class="about">
+        <div class="about__container container">
+          <div class="about__description description">
+            <h1 class="description__idea">
+              <span>Design-driven</span>
+              <span>audio & storage.</span>
+            </h1>
+            <div class="description__about">
+              <div class="description__text">Our vinyl storage & audio collections are designed to fit comfortably in
+                your home like real furniture. Built by hand with sustainable materials; wearing in, never wearing out.
+              </div>
+              <a class="description__link" href="#">Shop now</a>
+            </div>
 
+          </div>
+          <div class="about__logo">
+            <img src="assets/img/logo.png" alt="logo">
+          </div>
 
-    </div>
-  </main>
+        </div>
 
-  <footer class="footer"></footer>
+      </section>
+
+      <section class="collection">
+        <div class="collection__container container">
+          <div class="collection__slider slider">
+            <ul class="slider__slides">
+              <li class="slider__slide active slide">
+                <div class="slide__info">
+                  <h2 class="slide__header">Shop by Line</h2>
+                  <div class="slide__text">
+                    The Dovetail collection utilizes a “file drawer” approach to store hundreds of LPs, allowing you to
+                    easily flip through an entire record collection while enjoying a visual display of cover art across
+                    the front of the cabinet.
+                  </div>
+                  <div class="slide__link">
+                    <a href="#">Shop all dovetail</a>
+
+                  </div>
+                </div>
+                <div class="slide__img">
+                  <img src="assets/img/slide1.jpg" alt="slide1">
+                </div>
+              </li>
+              <li class="slider__slide slide">
+                <div class="slide__info">
+                  <h2 class="slide__header">Shop by Line</h2>
+                  <div class="slide__text">
+                    We developed MAX to offer the same quality and function of our solid-wood record cabinets in a
+                    small, and efficient footprint. Flat-packed, easy to assemble and disassemble, and as always, built
+                    in the U.S. from sustainably-harvested materials.
+                  </div>
+                  <div class="slide__link">
+                    <a href="#">Shop all dovetail</a>
+
+                  </div>
+                </div>
+                <div class="slide__img">
+                  <img src="assets/img/slide2.jpg" alt="slide">
+                </div>
+              </li>
+              <li class="slider__slide slide">
+                <div class="slide__info">
+                  <h2 class="slide__header">Shop by Line</h2>
+                  <div class="slide__text">
+                    Our handcrafted AERO cabinets offer a unique alternative to the mass produced entertainment cabinets
+                    and audio racks currently available. Our modular approach makes it easy for you to configure a
+                    custom cabinet that satisfies your specific storage and component requirements. Choose from a range
+                    of woods and finishes to further personalize your one-of-a-kind turntable furniture.
+                  </div>
+                  <div class="slide__link">
+                    <a href="#">Shop all dovetail</a>
+
+                  </div>
+                </div>
+                <div class="slide__img">
+                  <img src="assets/img/slide3.jpg" alt="slide3">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
 
   <script src="./assets/js/main.js" type="module"></script>
 </body>

@@ -1,0 +1,61 @@
+@use '../../mixins' as *;
+@use '../../presets' as *;
+
+.header {
+  height: 60px;
+  z-index: 5;
+  transition: background 0.5s;
+  &__container {
+    padding: 20px;
+    max-height: 100%;
+  }
+  &__menu {
+    max-height: 100%;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__logo {
+    height: 20px;
+    width: 80px;
+    transition: background-image 0.5s;
+  }
+  &__logo--non-top {
+    background-image: url(../img/logo.png);
+    background-size: cover;
+  }
+  &__nav-bar,
+  &__cart,
+  &__style {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  &__nav-bar {
+    @include unlist;
+    gap: 20px;
+    flex-basis: 50%;
+    & a {
+      text-decoration: none;
+      color: $color-primary;
+      font-family: $font-header;
+    }
+  }
+  &__style--non-top {
+    margin-left: 250px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: $color-primary;
+  }
+}
+.header--not-top {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: $color-bg-main;
+  z-index: 25;
+}

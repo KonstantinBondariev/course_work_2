@@ -1,4 +1,4 @@
-const {task, series, parallel, src, dest, watch} = require('gulp');
+const { task, series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const dc = require('postcss-discard-comments');
 const browserSync = require('browser-sync');
@@ -21,47 +21,42 @@ const PATH = {
   htmlFiles: './*.html',
   jsFolder: './assets/js/',
   jsFiles: './assets/js/**/*.js',
-  imgFolder: './assets/img/'
+  imgFolder: './assets/img/',
 };
 
 const PLUGINS = [
   dc({ discardComments: true }),
   autoprefixer({
-    overrideBrowserslist: [
-      'last 5 versions',
-      '> 0.1%'
-    ],
-    cascade: true
+    overrideBrowserslist: ['last 5 versions', '> 0.1%'],
+    cascade: true,
   }),
-  mqpacker({sort: sortCSSmq})
+  mqpacker({ sort: sortCSSmq }),
 ];
 
 function scss() {
   return src(PATH.scssFile)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss(PLUGINS))
     .pipe(csscomb())
     .pipe(dest(PATH.cssFolder))
     .pipe(browserSync.stream());
 }
 function scssDev() {
-  return src(PATH.scssFile, {sourcemaps: true})
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+  return src(PATH.scssFile, { sourcemaps: true })
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss(PLUGINS))
-    .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
+    .pipe(dest(PATH.cssFolder, { sourcemaps: true }))
     .pipe(browserSync.stream());
 }
 
 function comb() {
-  return src(PATH.scssFiles)
-    .pipe(csscomb())
-    .pipe(dest(PATH.scssFolder));
+  return src(PATH.scssFiles).pipe(csscomb()).pipe(dest(PATH.scssFolder));
 }
 
 function syncInit() {
   browserSync({
-    server: {baseDir: './'},
-    notify: false
+    server: { baseDir: './' },
+    notify: false,
   });
 }
 
@@ -94,24 +89,27 @@ function createStructure() {
   file[2] = `${PATH.jsFolder}main.js`;
   file[3] = scssFiles;
 
-  src('*.*', {read: false})
+  src('*.*', { read: false })
     .pipe(dest(PATH.scssFolder))
     .pipe(dest(PATH.cssFolder))
     .pipe(dest(PATH.jsFolder))
     .pipe(dest(PATH.imgFolder));
 
-  return new Promise((resolve) => setTimeout(() => {
-    for (let i = 0; i < file.length; i++) if (!Array.isArray(file[i])) {
-      require('fs').writeFileSync(file[i], '');
-      console.log(file[i]);
-    } else for (let j = 0; j < file[i].length; j++) {
-      require('fs').writeFileSync(file[i][j], '');
-      console.log(file[i][j]);
-    }
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      for (let i = 0; i < file.length; i++)
+        if (!Array.isArray(file[i])) {
+          require('fs').writeFileSync(file[i], '');
+          console.log(file[i]);
+        } else
+          for (let j = 0; j < file[i].length; j++) {
+            require('fs').writeFileSync(file[i][j], '');
+            console.log(file[i][j]);
+          }
 
-
-    resolve(true);
-  }, 1000));
+      resolve(true);
+    }, 1000)
+  );
 }
 
 task('comb', series(comb));

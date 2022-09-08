@@ -366,8 +366,6 @@ h6 {
 }
 
 .collection__container {
-  overflow: hidden;
-
   padding: 20px;
 
   background-color: #420b13;
@@ -375,11 +373,13 @@ h6 {
 
 .slider {
   position: relative;
+
+  overflow: hidden;
 }
 .slider__slides {
   position: relative;
 
-  height: calc(100vh - 40px);
+  height: calc(100vh - 100px);
   margin: 0;
   padding: 0;
 

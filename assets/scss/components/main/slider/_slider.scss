@@ -1,12 +1,14 @@
-@use "../../../mixins" as *;
-@use "../../../presets" as *;
+@use '../../../mixins' as *;
+@use '../../../presets' as *;
 
 .slider {
+  overflow: hidden;
+
   position: relative;
   &__slides {
     position: relative;
 
-    height: calc(100vh - 40px);
+    height: calc(100vh - 100px);
     margin: 0;
     padding: 0;
 

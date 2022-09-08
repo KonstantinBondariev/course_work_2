@@ -1,54 +1,65 @@
-@use '../../../mixins' as *;
-@use '../../../presets' as *;
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
 
 .slider {
   position: relative;
   &__slides {
     position: relative;
+
     height: calc(100vh - 40px);
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+
     list-style-type: none;
   }
 
   &__slide {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
-    opacity: 0;
-    z-index: 1;
+
     transition: opacity 0.5s;
+
+    opacity: 0;
     /*
       non-essential styles:
       just for appearance; change whatever you want
     */
   }
   &__control-panel {
-    z-index: 10;
     position: absolute;
+    z-index: 10;
     top: 20%;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 
     color: $color-additional;
+
+    gap: 10px;
   }
   &__controls {
-    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 40px;
     height: 40px;
-    border-radius: 40px;
-    user-select: none;
+
     cursor: pointer;
-    border: $color-additional 2px solid;
+    user-select: none;
     transition: color 0.5s;
     transition: background-color 0.5s;
+
+    border: $color-additional 2px solid;
+    border-radius: 40px;
+
+    font-weight: bold;
     &:hover {
       color: $color-bg-add;
       background-color: $color-additional;
@@ -56,23 +67,29 @@
   }
   &__indicator-panel {
     position: absolute;
-    top: 30%;
     z-index: 11;
-    margin-top: 10px;
-    @include unlist;
+    top: 30%;
+
     display: flex;
     justify-content: center;
-    gap: 20px;
-    transform: translate(-33%, 0);
+
+    margin-top: 10px;
+
     transition: transform 1s 0.5s;
+    transform: translate(-33%, 0);
+
+    gap: 20px;
+    @include unlist;
   }
   &__indicator {
+    cursor: pointer;
+    transition: opacity 1s;
+
+    opacity: 0.7;
+    color: $color-additional;
+
     font-family: $font-header;
     font-size: 3rem;
-    color: $color-additional;
-    transition: opacity 1s;
-    cursor: pointer;
-    opacity: 0.7;
     &--active {
       opacity: 1;
     }
@@ -84,20 +101,23 @@
 }
 
 .active {
-  opacity: 1;
   z-index: 2;
+
+  opacity: 1;
 }
 .slide {
+  display: flex;
+  justify-content: space-between;
+
   box-sizing: border-box;
 
   color: $color-additional;
-  display: flex;
-  justify-content: space-between;
   &__info {
-    max-width: 40%;
-    max-height: 80%;
     display: flex;
     flex-direction: column;
+
+    max-width: 40%;
+    max-height: 80%;
   }
   &__img {
     max-height: calc(100vh - 40px);
@@ -106,8 +126,9 @@
     }
   }
   &__header {
-    font-size: 2.5rem;
     margin: 0;
+
+    font-size: 2.5rem;
   }
   &__text {
     padding-top: 250px;
@@ -118,14 +139,17 @@
     padding-left: 30%;
 
     & a {
-      text-decoration: none;
-      color: $color-additional;
       display: inline-block;
-      border: $color-additional 2px solid;
+
       padding: 7px 10px;
-      border-radius: 20px;
+
       transition: color 0.5s;
       transition: background-color 0.5s;
+      text-decoration: none;
+
+      color: $color-additional;
+      border: $color-additional 2px solid;
+      border-radius: 20px;
       &:hover {
         color: $color-bg-add;
         background-color: $color-additional;

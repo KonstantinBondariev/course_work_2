@@ -1,11 +1,13 @@
-@use '../presets' as *;
+@use "../presets" as *;
 
 html {
+  letter-spacing: 0.07rem;
+
+  color: $color-primary;
+
   font-family: $font-main;
   font-size: $font-size;
-  color: $color-primary;
   line-height: 1.33;
-  letter-spacing: 0.07rem;
 }
 body {
   background-color: $color-bg-main;

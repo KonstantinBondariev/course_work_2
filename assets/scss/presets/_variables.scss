@@ -1,15 +1,12 @@
-@use 'sass:math';
-
-$font-header: 'Conv_futura medium bt', sans-serif;
-$font-main: 'Conv_Chalet-LondonNineteenSixty', sans-serif;
+@use "sass:math";
+$font-header: "Conv_futura medium bt", sans-serif;
+$font-main: "Conv_Chalet-LondonNineteenSixty", sans-serif;
 $font-size: 14px;
-
 $ul: 1340px;
 $xl: 1200px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
-
 $gap: 20px;
 $gap-sm: math.div($gap, 2);
 $gap-lg: $gap * 1.5;

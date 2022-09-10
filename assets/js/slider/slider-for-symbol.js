@@ -57,6 +57,7 @@ class SliderForSymbol extends KeybordSlider {
     this.indicator[this.cureantSlide].classList.toggle(
       'slider__indicator--active'
     );
+
     this.cureantSlide = (n + this.slidesLenght) % this.slidesLenght;
     this.slide[this.cureantSlide].classList.toggle('active');
     this.indicator[this.cureantSlide].classList.toggle(

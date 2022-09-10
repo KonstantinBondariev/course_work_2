@@ -170,7 +170,7 @@ template {
 html {
   letter-spacing: 0.07rem;
 
-  color: #c72a00;
+  color: black;
 
   font-family: "Conv_Chalet-LondonNineteenSixty", sans-serif;
   font-size: 14px;
@@ -178,7 +178,7 @@ html {
 }
 
 body {
-  background-color: #fffcda;
+  background-color: white;
 }
 
 h1,
@@ -258,7 +258,7 @@ h6 {
 .header__nav-bar a {
   text-decoration: none;
 
-  color: #c72a00;
+  color: black;
 
   font-family: "Conv_futura medium bt", sans-serif;
 }
@@ -268,7 +268,7 @@ h6 {
   margin-left: 250px;
 
   border-radius: 10px;
-  background-color: #c72a00;
+  background-color: black;
 }
 
 .header--not-top {
@@ -278,7 +278,7 @@ h6 {
   right: 0;
   left: 0;
 
-  background-color: #fffcda;
+  background-color: white;
 }
 
 .main {
@@ -360,7 +360,7 @@ h6 {
 
   text-decoration: none;
 
-  color: #c72a00;
+  color: black;
 
   font-size: 2.5rem;
 }
@@ -368,7 +368,7 @@ h6 {
 .collection__container {
   padding: 20px;
 
-  background-color: #420b13;
+  background-color: lightgrey;
 }
 
 .slider {
@@ -453,7 +453,7 @@ h6 {
   font-weight: bold;
 }
 .slider__controls:hover {
-  color: #420b13;
+  color: lightgrey;
   background-color: #e5b0a3;
 }
 .slider__indicator-panel {
@@ -479,9 +479,9 @@ h6 {
           transition: -webkit-transform 1s 0.5s;
           transition:         transform 1s 0.5s;
           transition:         transform 1s 0.5s, -webkit-transform 1s 0.5s;
-  -webkit-transform: translate(40%, 0);
-      -ms-transform: translate(40%, 0);
-          transform: translate(40%, 0);
+  -webkit-transform: translate(-33%, 0);
+      -ms-transform: translate(-33%, 0);
+          transform: translate(-33%, 0);
 
   gap: 20px;
 }
@@ -572,7 +572,7 @@ h6 {
   border-radius: 20px;
 }
 .slide__link a:hover {
-  color: #420b13;
+  color: lightgrey;
   background-color: #e5b0a3;
 }
 

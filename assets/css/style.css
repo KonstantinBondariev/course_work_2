@@ -195,7 +195,7 @@ h6 {
   padding: 0 20px;
 }
 .header {
-  z-index: 5;
+  z-index: 150;
 
   height: 60px;
 
@@ -279,6 +279,88 @@ h6 {
   left: 0;
 
   background-color: #fffcda;
+}
+
+.nav-bar__open-linlk {
+  display: none;
+
+  -webkit-transition: all 0.5s;
+       -o-transition: all 0.5s;
+          transition: all 0.5s;
+}
+.nav-bar__open-list {
+  margin-top: 30px;
+  margin-left: 70px;
+}
+.nav-bar__shop-item,
+.nav-bar__learn-item {
+  padding-left: 20px;
+
+  opacity: 0.8;
+}
+.nav-bar__shop-item a,
+.nav-bar__learn-item a {
+  text-decoration: none;
+
+  color: #420b13;
+}
+.nav-bar__shop-item:hover,
+.nav-bar__learn-item:hover {
+  opacity: 1;
+}
+
+.open-btn {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+  margin: 40px 0 0 20px;
+
+  cursor: pointer;
+}
+.open-btn__span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+
+  display: block;
+
+  width: 50px;
+  height: 5px;
+
+  background-color: #420b13;
+}
+.open-btn__span--1 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.open-btn__span--2 {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.open-link {
+  position: absolute;
+  z-index: 51;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 60%;
+  height: 100vh;
+
+  color: #420b13;
+  background-color: #e5b0a3;
+
+  font-family: "Conv_futura medium bt", sans-serif;
+  font-size: 3rem;
 }
 
 .main {

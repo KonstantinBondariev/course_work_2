@@ -3,8 +3,11 @@
 @use 'common/classes';
 
 @use 'components/header/header';
+@use 'components/header/nav-bar';
 
 @use 'components/main/main';
+@use 'components/main/sections/about';
+@use 'components/main/sections/collection';
 @use 'components/main/slider/slider';
 
 @use 'components/footer/footer';

@@ -1,5 +1,23 @@
-@use "../presets" as *;
+@use '../presets' as *;
 $diff: 0.2px;
+/* custom */
+@mixin fourK-min {
+  @media (min-width: $fourK) {
+    @content;
+  }
+}
+
+@mixin fourK-uul {
+  @media (max-width: ($fourK - $diff)) and (min-width: $uul) {
+    @content;
+  }
+}
+
+@mixin uul-ul {
+  @media (max-width: ($uul - $diff)) and (min-width: $ul) {
+    @content;
+  }
+}
 
 /* ul */
 @mixin ul-min {

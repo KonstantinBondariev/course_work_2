@@ -48,13 +48,13 @@ class Header {
 
   _changeHeaderMenu() {
     if (this._pageWatch()) {
-      this.header.classList.add('header--not-top');
-      this.headerLogo.classList.add('header__logo--non-top');
-      this.headerStyle.classList.add('header__style--non-top');
+      this.header.classList.add('header--fixed');
+      this.headerLogo.classList.add('header__logo--fixed');
+      this.headerStyle.classList.add('header__style--fixed');
     } else {
-      this.header.classList.remove('header--not-top');
-      this.headerLogo.classList.remove('header__logo--non-top');
-      this.headerStyle.classList.remove('header__style--non-top');
+      this.header.classList.remove('header--fixed');
+      this.headerLogo.classList.remove('header__logo--fixed');
+      this.headerStyle.classList.remove('header__style--fixed');
     }
   }
   _initListeners() {

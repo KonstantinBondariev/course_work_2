@@ -27,10 +27,6 @@
     transition: opacity 0.5s;
 
     opacity: 0;
-    /*
-      non-essential styles:
-      just for appearance; change whatever you want
-    */
   }
   &__control-panel {
     position: absolute;
@@ -46,6 +42,9 @@
     color: $color-additional;
 
     gap: 10px;
+    @include md {
+      top: 90%;
+    }
   }
   &__controls {
     display: flex;
@@ -84,6 +83,9 @@
 
     gap: 20px;
     @include unlist;
+    @include md {
+      top: 60%;
+    }
   }
   &__indicator {
     cursor: pointer;
@@ -94,12 +96,14 @@
 
     font-family: $font-header;
     font-size: 3rem;
+    @include lg {
+      font-size: 2rem;
+    }
     &--active {
       opacity: 1;
     }
     &:hover {
-      // text-shadow: $color-additional 1px 0 10px;
-      font-size: 3rem;
+      text-shadow: $color-additional 1px 0 1px;
     }
   }
 }
@@ -116,27 +120,53 @@
   box-sizing: border-box;
 
   color: $color-additional;
+  @include md {
+    flex-direction: column-reverse;
+  }
   &__info {
     display: flex;
     flex-direction: column;
 
     max-width: 40%;
-    max-height: 80%;
+    min-height: 100%;
+    @include md {
+      max-width: 100%;
+      min-height: 50%;
+    }
   }
   &__img {
-    max-height: calc(100vh - 40px);
+    @include xl {
+      max-height: calc(100vh - 40px);
+    }
+    @include xl-md {
+      max-width: 40%;
+    }
+    @include md {
+      max-height: calc(50vh - 40px);
+      margin-left: auto;
+    }
+
     & img {
       max-height: 100%;
+      @include md {
+        object-fit: contain;
+      }
     }
   }
   &__header {
     margin: 0;
 
     font-size: 2.5rem;
+    flex-basis: 50%;
+    @include md {
+      flex-basis: 30%;
+    }
   }
   &__text {
-    padding-top: 250px;
     padding-left: 30%;
+    @include md {
+      padding-left: 0;
+    }
   }
   &__link {
     margin-top: 20px;

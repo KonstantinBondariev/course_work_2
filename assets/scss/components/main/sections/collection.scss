@@ -1,0 +1,10 @@
+@use '../../../mixins' as *;
+@use '../../../presets' as *;
+
+.collection {
+  &__container {
+    padding: 20px;
+
+    background-color: $color-bg-add;
+  }
+}

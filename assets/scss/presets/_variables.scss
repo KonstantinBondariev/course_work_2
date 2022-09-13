@@ -1,7 +1,9 @@
-@use "sass:math";
-$font-header: "Conv_futura medium bt", sans-serif;
-$font-main: "Conv_Chalet-LondonNineteenSixty", sans-serif;
+@use 'sass:math';
+$font-header: 'Conv_futura medium bt', sans-serif;
+$font-main: 'Conv_Chalet-LondonNineteenSixty', sans-serif;
 $font-size: 14px;
+$fourK: 2560px;
+$uul: 1440px;
 $ul: 1340px;
 $xl: 1200px;
 $lg: 992px;

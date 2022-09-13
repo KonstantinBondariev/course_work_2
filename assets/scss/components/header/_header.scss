@@ -2,8 +2,6 @@
 @use '../../presets' as *;
 
 .header {
-  z-index: 150;
-
   height: 60px;
 
   transition: background 0.5s;
@@ -17,15 +15,22 @@
 
     max-height: 100%;
 
-    gap: 20px;
+    gap: $gap-x5;
+    @include lg {
+      gap: $gap;
+    }
   }
   &__logo {
     width: 80px;
     height: 20px;
+    margin-right: $gap-x3;
 
     transition: background-image 0.5s;
+    @include lg {
+      margin-right: $gap;
+    }
   }
-  &__logo--non-top {
+  &__logo--fixed {
     background-image: url(../img/logo.png);
     background-size: cover;
   }
@@ -36,29 +41,21 @@
     align-items: center;
     justify-content: center;
   }
-  &__nav-bar {
-    flex-basis: 50%;
-
-    gap: 20px;
-    @include unlist;
-    & a {
-      text-decoration: none;
-
-      color: $color-primary;
-
-      font-family: $font-header;
-    }
+  &__cart {
+    margin-left: auto;
   }
-  &__style--non-top {
+
+  &__style {
     width: 10px;
     height: 10px;
-    margin-left: 250px;
-
+    cursor: pointer;
+  }
+  &__style--fixed {
     border-radius: 10px;
     background-color: $color-primary;
   }
 }
-.header--not-top {
+.header--fixed {
   position: fixed;
   z-index: 25;
   top: 0;
@@ -66,67 +63,4 @@
   left: 0;
 
   background-color: $color-bg-main;
-}
-
-.nav-bar {
-  &__open-linlk {
-    display: none;
-    transition: all 0.5s;
-  }
-  &__open-list {
-    margin-left: 70px;
-    margin-top: 30px;
-  }
-  &__shop-item,
-  &__learn-item {
-    opacity: 0.8;
-    padding-left: 20px;
-
-    & a {
-      text-decoration: none;
-      color: $color-bg-add;
-    }
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-.open-btn {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  margin: 40px 0px 0px 20px;
-  cursor: pointer;
-  &__span {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-
-    display: block;
-    width: 50px;
-    height: 5px;
-    background-color: $color-bg-add;
-  }
-  &__span--1 {
-    transform: rotate(45deg);
-  }
-  &__span--2 {
-    transform: rotate(135deg);
-  }
-}
-.open-link {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $color-additional;
-  width: 60%;
-  height: 100vh;
-  z-index: 51;
-  font-family: $font-header;
-  font-size: 3rem;
-  color: $color-bg-add;
 }

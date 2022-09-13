@@ -3,7 +3,7 @@ class Slider {
     const settings = {
       ...{
         sliderClass: '.slider',
-        interval: 10000,
+        interval: 3000,
         isPlaying: true,
         slidesClass: '.slider__slide',
       },

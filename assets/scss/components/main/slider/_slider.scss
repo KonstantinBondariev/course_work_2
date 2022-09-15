@@ -43,7 +43,8 @@
 
     gap: 10px;
     @include md {
-      top: 90%;
+      top: 0%;
+      padding-left: 0;
     }
   }
   &__controls {
@@ -74,17 +75,19 @@
     top: 30%;
 
     display: flex;
+
     justify-content: center;
 
     margin-top: 10px;
 
     transition: transform 1s 0.5s;
-    transform: translate(40%, 0);
 
     gap: 20px;
     @include unlist;
     @include md {
-      top: 60%;
+      flex-direction: column;
+      gap: 0px;
+      top: 0;
     }
   }
   &__indicator {
@@ -149,7 +152,7 @@
     & img {
       max-height: 100%;
       @include md {
-        object-fit: contain;
+        object-fit: cover;
       }
     }
   }
@@ -164,8 +167,11 @@
   }
   &__text {
     padding-left: 30%;
+
     @include md {
-      padding-left: 0;
+      padding-left: 20px;
+      padding-right: 40px;
+      max-width: 60%;
     }
   }
   &__link {

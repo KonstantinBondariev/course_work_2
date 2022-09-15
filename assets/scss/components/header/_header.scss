@@ -5,6 +5,9 @@
   height: 60px;
 
   transition: background 0.5s;
+  & a {
+    display: block;
+  }
   &__container {
     max-height: 100%;
     padding: 20px;

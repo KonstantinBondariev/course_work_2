@@ -11,7 +11,9 @@ class Header {
         navBarLernId: '#linkLearn',
         navBarOpenShopId: '#shop',
         navBarOpenLernId: '#lern',
-        btnClouseId: '.open-btn',
+        btnClouseClass: '.open-btn',
+        navBarListLinksOpenClass: '.nav-bar__list-links-open',
+        navBarBurger: '.nav-bar__burger',
       },
       ...p,
     };
@@ -24,7 +26,11 @@ class Header {
     this.linkLearn = this.header.querySelector(settings.navBarLernId);
     this.openShop = this.header.querySelector(settings.navBarOpenShopId);
     this.openLern = this.header.querySelector(settings.navBarOpenLernId);
-    this.btnClouse = this.header.querySelectorAll(settings.btnClouseId);
+    this.btnClouse = this.header.querySelectorAll(settings.btnClouseClass);
+    this.navBarListLinksOpen = this.header.querySelector(
+      settings.navBarListLinksOpenClass
+    );
+    this.burgerBtn = this.header.querySelector(settings.navBarBurger);
   }
 
   _openLink(e) {
@@ -34,6 +40,8 @@ class Header {
       ? this.openShop.classList.add('open-link')
       : this.target == this.linkLearn
       ? this.openLern.classList.add('open-link')
+      : this.target == this.burgerBtn
+      ? this.navBarListLinksOpen.classList.toggle('open-list')
       : null;
   }
   _clouseLink() {
@@ -64,7 +72,6 @@ class Header {
   }
 
   init() {
-    console.log(this.linkLearn);
     this._initListeners();
     this.watch = setInterval(() => {
       this._pageWatch();

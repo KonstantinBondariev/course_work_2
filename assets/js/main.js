@@ -5,6 +5,7 @@ import SuperPuperProSlider from './slider/super-puper-PRO-slider.js';
 import SliderForSymbol from './slider/slider-for-symbol.js';
 import Header from './header.js';
 import Style from './style.js';
+import Wrapper from './wrapper.js';
 
 const slider = new SliderForSymbol();
 slider.init();
@@ -14,3 +15,6 @@ headerMenu.init();
 
 const style = new Style();
 style.init();
+
+const wrapper = new Wrapper();
+wrapper.init();

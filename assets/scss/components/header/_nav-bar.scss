@@ -4,12 +4,22 @@
 .nav-bar {
   flex-basis: 30%;
   display: flex;
-  justify-content: space-evenly;
 
-  gap: 20px;
-  @include unlist;
   @include lg {
     flex-basis: 50%;
+  }
+  @include md {
+    justify-content: flex-start;
+  }
+  &__list-links {
+    @include unlist;
+    display: flex;
+    justify-content: space-evenly;
+
+    gap: 20px;
+    @include md {
+      display: none;
+    }
   }
 
   & a {
@@ -22,7 +32,8 @@
   &__link {
     cursor: pointer;
   }
-  &__open-linlk {
+  &__open-linlk,
+  &__list-links-open {
     display: none;
     transition: all 0.5s;
   }
@@ -42,6 +53,19 @@
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  &__burger {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/vinyl.webp);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
     }
   }
 }
@@ -82,4 +106,27 @@
   font-family: $font-header;
   font-size: 3rem;
   color: $color-bg-add;
+  @include lg {
+    font-size: 2rem;
+  }
+}
+
+.open-list {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-additional;
+  width: 100%;
+
+  z-index: 51;
+  font-family: $font-header;
+  font-size: 3rem;
+  color: $color-bg-add;
+  @include unlist;
+  @include lg {
+    font-size: 2rem;
+  }
 }

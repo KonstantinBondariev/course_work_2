@@ -38,8 +38,9 @@ class SliderForSymbol extends KeybordSlider {
     this.indicator = this.slider.querySelectorAll('.slider__indicator');
   }
 
-  _watchSliderWidth() {
+  _watchSliderSize() {
     this.sliderWidth = +this.slider.getBoundingClientRect().width;
+    this.sliderHeight = +this.slider.getBoundingClientRect().height;
   }
 
   _transformInicatorPanel() {
@@ -87,19 +88,22 @@ class SliderForSymbol extends KeybordSlider {
       if (this.cureantSlide === 0) {
         this.indicatorPanel.setAttribute(
           'style',
-          `transform: translate(${(this.sliderWidth / 1400) * 155}px, 0)`
-        );
+          `transform: translate(${this.sliderWidth * 0.7}px,
+             ${this.sliderHeight * 0.63}px)`
+        ); //${(this.sliderWidth / 1400) * 155
       }
       if (this.cureantSlide === 1) {
         this.indicatorPanel.setAttribute(
           'style',
-          `transform: translate(${(this.sliderWidth / 1400) * 155 - 130}px, 0)`
+          `transform: translate(${this.sliderWidth * 0.7}px, 
+            ${this.sliderHeight * 0.63 - 38}px)`
         );
       }
       if (this.cureantSlide === 2) {
         this.indicatorPanel.setAttribute(
           'style',
-          `transform: translate(${(this.sliderWidth / 1400) * 155 - 210}px, 0)`
+          `transform: translate(${this.sliderWidth * 0.7}px, 
+            ${this.sliderHeight * 0.63 - 76}px)`
         );
       }
     }
@@ -126,7 +130,7 @@ class SliderForSymbol extends KeybordSlider {
       // this._transformInicatorPanel();
     }, this.interval);
     this.wath = setInterval(() => {
-      this._watchSliderWidth();
+      this._watchSliderSize();
       this._transformInicatorPanel();
     }, 50);
   }

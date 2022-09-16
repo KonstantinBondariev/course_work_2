@@ -9,22 +9,20 @@ class Wrapper {
     this.bodyWidth = +this.body.getBoundingClientRect().width;
   }
 
-  _addText() {
+  _chageWrapper() {
     if (this.bodyWidth <= 576) {
       this.wrapperEl.textContent = 'sorry';
       this.status = true;
-    }
-    if (this.bodyWidth > 576 && this.status) {
+    } else if (this.status) {
       this.wrapperEl.innerHTML = this.wrapperContent;
       this.status = false;
     }
-    return;
   }
 
   init() {
     this.watch = setInterval(() => {
       this._watchBodySize();
-      this._addText();
+      this._chageWrapper();
     }, 50);
   }
 }

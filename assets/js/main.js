@@ -7,14 +7,14 @@ import SliderForSymbol from './slider/slider-for-symbol.js';
 import Header from './header.js';
 import Style from './style.js';
 
-const slider = new SliderForSymbol();
-slider.init();
-// slider.pauseSlideShow();
-const headerMenu = new Header();
-headerMenu.init();
+// const slider = new SliderForSymbol();
+// slider.init();
+// // slider.pauseSlideShow();
+// const headerMenu = new Header();
+// headerMenu.init();
 
-const style = new Style();
-style.init();
+// const style = new Style();
+// style.init();
 
 const wrapper = new Wrapper();
 wrapper.init();

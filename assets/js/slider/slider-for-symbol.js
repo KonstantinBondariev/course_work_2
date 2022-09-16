@@ -50,14 +50,12 @@ class SliderForSymbol extends KeybordSlider {
           'style',
           `transform: translate(${(this.sliderWidth / 1400) * 155}px, 0)`
         );
-      }
-      if (this.cureantSlide === 1) {
+      } else if (this.cureantSlide === 1) {
         this.indicatorPanel.setAttribute(
           'style',
           `transform: translate(${(this.sliderWidth / 1400) * 155 - 180}px, 0)`
         );
-      }
-      if (this.cureantSlide === 2) {
+      } else if (this.cureantSlide === 2) {
         this.indicatorPanel.setAttribute(
           'style',
           `transform: translate(${(this.sliderWidth / 1400) * 155 - 275}px, 0)`
@@ -70,14 +68,12 @@ class SliderForSymbol extends KeybordSlider {
           'style',
           `transform: translate(${(this.sliderWidth / 1400) * 155}px, 0)`
         );
-      }
-      if (this.cureantSlide === 1) {
+      } else if (this.cureantSlide === 1) {
         this.indicatorPanel.setAttribute(
           'style',
           `transform: translate(${(this.sliderWidth / 1400) * 155 - 130}px, 0)`
         );
-      }
-      if (this.cureantSlide === 2) {
+      } else if (this.cureantSlide === 2) {
         this.indicatorPanel.setAttribute(
           'style',
           `transform: translate(${(this.sliderWidth / 1400) * 155 - 210}px, 0)`
@@ -91,15 +87,13 @@ class SliderForSymbol extends KeybordSlider {
           `transform: translate(${this.sliderWidth * 0.7}px,
              ${this.sliderHeight * 0.63}px)`
         ); //${(this.sliderWidth / 1400) * 155
-      }
-      if (this.cureantSlide === 1) {
+      } else if (this.cureantSlide === 1) {
         this.indicatorPanel.setAttribute(
           'style',
           `transform: translate(${this.sliderWidth * 0.7}px, 
             ${this.sliderHeight * 0.63 - 38}px)`
         );
-      }
-      if (this.cureantSlide === 2) {
+      } else if (this.cureantSlide === 2) {
         this.indicatorPanel.setAttribute(
           'style',
           `transform: translate(${this.sliderWidth * 0.7}px, 

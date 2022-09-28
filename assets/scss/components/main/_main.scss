@@ -1,5 +1,5 @@
-@use '../../mixins' as *;
-@use '../../presets' as *;
+@use "../../mixins" as *;
+@use "../../presets" as *;
 .main {
   position: absolute;
   top: 0;
@@ -14,7 +14,7 @@
     min-width: 50%;
     min-height: 100vh;
 
-    background: no-repeat url('../img/section1.jpg');
+    background: no-repeat url("../img/section1.jpg");
     background-position: center;
     background-size: cover;
   }

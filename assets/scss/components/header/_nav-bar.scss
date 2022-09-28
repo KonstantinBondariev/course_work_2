@@ -1,9 +1,9 @@
-@use '../../mixins' as *;
-@use '../../presets' as *;
+@use "../../mixins" as *;
+@use "../../presets" as *;
 
 .nav-bar {
-  flex-basis: 30%;
   display: flex;
+  flex-basis: 30%;
 
   @include lg {
     flex-basis: 50%;
@@ -12,11 +12,11 @@
     justify-content: flex-start;
   }
   &__list-links {
-    @include unlist;
     display: flex;
     justify-content: space-evenly;
 
     gap: 20px;
+    @include unlist;
     @include md {
       display: none;
     }
@@ -35,19 +35,22 @@
   &__open-linlk,
   &__list-links-open {
     display: none;
+
     transition: all 0.5s;
   }
   &__open-list {
-    margin-left: 70px;
     margin-top: 30px;
+    margin-left: 70px;
   }
   &__shop-item,
   &__learn-item {
-    opacity: 0.8;
     padding-left: 20px;
+
+    opacity: 0.8;
 
     & a {
       text-decoration: none;
+
       color: $color-bg-add;
     }
 
@@ -59,10 +62,12 @@
   &__burger {
     width: 30px;
     height: 30px;
+
+    cursor: pointer;
+
     background-image: url(../img/vinyl.webp);
     background-position: center;
     background-size: cover;
-    cursor: pointer;
 
     @include md-min {
       display: none;
@@ -71,9 +76,11 @@
 }
 .open-btn {
   position: relative;
+
   width: 50px;
   height: 50px;
-  margin: 40px 0px 0px 20px;
+  margin: 40px 0 0 20px;
+
   cursor: pointer;
   &__span {
     position: absolute;
@@ -82,8 +89,10 @@
     left: 0;
 
     display: block;
+
     width: 50px;
     height: 5px;
+
     background-color: $color-bg-add;
   }
   &__span--1 {
@@ -94,37 +103,47 @@
   }
 }
 .open-link {
-  display: flex;
   position: absolute;
+  z-index: 51;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-additional;
+
+  display: flex;
+
   width: 60%;
   height: 100vh;
-  z-index: 51;
+
+  color: $color-bg-add;
+  background-color: $color-additional;
+
   font-family: $font-header;
   font-size: 3rem;
-  color: $color-bg-add;
+
   @include lg {
     font-size: 2rem;
   }
 }
 
 .open-list {
-  display: flex;
   position: absolute;
-  justify-content: space-around;
+  z-index: 51;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-additional;
-  width: 100%;
 
-  z-index: 51;
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  padding-top: 10px;
+
+  color: $color-bg-add;
+  background-color: $color-additional;
+
   font-family: $font-header;
   font-size: 3rem;
-  color: $color-bg-add;
+
   @include unlist;
   @include lg {
     font-size: 2rem;

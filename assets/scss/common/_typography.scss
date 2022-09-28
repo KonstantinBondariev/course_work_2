@@ -1,4 +1,5 @@
-@use "../presets" as *;
+@use '../presets' as *;
+@use '../mixins/' as *;
 
 html {
   letter-spacing: 0.07rem;
@@ -11,6 +12,9 @@ html {
 }
 body {
   background-color: $color-bg-main;
+  @include sm {
+    padding: 30px;
+  }
 }
 
 h1,

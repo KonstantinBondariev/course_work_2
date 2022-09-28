@@ -33,7 +33,7 @@ class Style {
   changeFile() {
     if (
       this.headerStyle.getAttribute('class') ==
-      'header__style header__style--non-top act'
+      'header__style header__style--fixed act'
     ) {
       this.actualCssFile = this.cssFile;
     } else this.actualCssFile = this.cssAltFile;

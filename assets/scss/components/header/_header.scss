@@ -1,5 +1,5 @@
-@use '../../mixins' as *;
-@use '../../presets' as *;
+@use "../../mixins" as *;
+@use "../../presets" as *;
 
 .header {
   height: 60px;
@@ -29,6 +29,7 @@
     margin-right: $gap-x3;
 
     transition: background-image 0.5s;
+
     @include lg {
       margin-right: $gap;
     }
@@ -51,6 +52,7 @@
   &__style {
     width: 10px;
     height: 10px;
+
     cursor: pointer;
   }
   &__style--fixed {

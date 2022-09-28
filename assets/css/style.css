@@ -166,7 +166,6 @@ template {
 [hidden] {
   display: none;
 }
-
 html {
   letter-spacing: 0.07rem;
 
@@ -194,6 +193,7 @@ h6 {
   max-width: 100%;
   padding: 0 20px;
 }
+
 .header {
   height: 60px;
 
@@ -411,6 +411,7 @@ h6 {
   width: 100%;
   margin: 0;
   padding: 0;
+  padding-top: 10px;
 
   list-style: none;
 
@@ -817,5 +818,10 @@ h6 {
     max-width: 60%;
     padding-right: 40px;
     padding-left: 20px;
+  }
+}
+@media (max-width: 575.8px) {
+  body {
+    padding: 30px;
   }
 }

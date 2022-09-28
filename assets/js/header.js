@@ -27,10 +27,17 @@ class Header {
     this.openShop = this.header.querySelector(settings.navBarOpenShopId);
     this.openLern = this.header.querySelector(settings.navBarOpenLernId);
     this.btnClouse = this.header.querySelectorAll(settings.btnClouseClass);
+    this.btnClouseVinyl = this.btnClouse[0];
     this.navBarListLinksOpen = this.header.querySelector(
       settings.navBarListLinksOpenClass
     );
     this.burgerBtn = this.header.querySelector(settings.navBarBurger);
+  }
+
+  _navBarVinylOpen() {
+    this.navBarListLinksOpen.classList.add('open-list');
+    this.btnClouseVinyl.setAttribute('style', 'margin-top: -5px;');
+    this.navBarListLinksOpen.append(this.btnClouseVinyl);
   }
 
   _openLink(e) {
@@ -41,12 +48,13 @@ class Header {
       : this.target == this.linkLearn
       ? this.openLern.classList.add('open-link')
       : this.target == this.burgerBtn
-      ? this.navBarListLinksOpen.classList.toggle('open-list')
+      ? this._navBarVinylOpen()
       : null;
   }
   _clouseLink() {
     this.openShop.classList.remove('open-link');
     this.openLern.classList.remove('open-link');
+    this.navBarListLinksOpen.classList.remove('open-list');
   }
 
   _pageWatch() {
@@ -67,8 +75,9 @@ class Header {
   }
   _initListeners() {
     this.headerMenu.addEventListener('click', this._openLink.bind(this));
-    this.btnClouse[0].addEventListener('click', () => this._clouseLink());
-    this.btnClouse[1].addEventListener('click', () => this._clouseLink());
+    this.btnClouse[0].addEventListener('click', this._clouseLink.bind(this));
+    this.btnClouse[1].addEventListener('click', this._clouseLink.bind(this));
+    this.btnClouseVinyl.addEventListener('click', this._clouseLink.bind(this));
   }
 
   init() {

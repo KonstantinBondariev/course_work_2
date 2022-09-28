@@ -1,5 +1,5 @@
-@use '../../../mixins' as *;
-@use '../../../presets' as *;
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
 
 .about {
   &__container {
@@ -16,7 +16,6 @@
     left: 0;
 
     max-width: 100%;
-
     margin: 20px 20px 0 20px;
 
     & img {

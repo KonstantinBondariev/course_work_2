@@ -18,7 +18,7 @@ class Wrapper {
 
   _chageWrapper() {
     if (this.bodyWidth <= 576) {
-      this.wrapperEl.textContent = 'sorry';
+      this.wrapperEl.textContent = 'sorry this site is for pc only';
       this.status = true;
     } else if (this.status) {
       this.wrapperEl.innerHTML = this.wrapperContent;

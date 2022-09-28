@@ -1,10 +1,10 @@
-@use '../../../mixins' as *;
-@use '../../../presets' as *;
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
 
 .slider {
-  overflow: hidden;
-
   position: relative;
+
+  overflow: hidden;
   &__slides {
     position: relative;
 
@@ -43,7 +43,8 @@
 
     gap: 10px;
     @include md {
-      top: 0%;
+      top: 0;
+
       padding-left: 0;
     }
   }
@@ -75,7 +76,6 @@
     top: 30%;
 
     display: flex;
-
     justify-content: center;
 
     margin-top: 10px;
@@ -85,9 +85,11 @@
     gap: 20px;
     @include unlist;
     @include md {
-      flex-direction: column;
-      gap: 0px;
       top: 0;
+
+      flex-direction: column;
+
+      gap: 0;
     }
   }
   &__indicator {
@@ -99,6 +101,7 @@
 
     font-family: $font-header;
     font-size: 3rem;
+
     @include lg {
       font-size: 2rem;
     }
@@ -123,6 +126,7 @@
   box-sizing: border-box;
 
   color: $color-additional;
+
   @include md {
     flex-direction: column-reverse;
   }
@@ -132,6 +136,7 @@
 
     max-width: 40%;
     min-height: 100%;
+
     @include md {
       max-width: 100%;
       min-height: 50%;
@@ -151,16 +156,19 @@
 
     & img {
       max-height: 100%;
+
       @include md {
         object-fit: cover;
       }
     }
   }
   &__header {
+    flex-basis: 50%;
+
     margin: 0;
 
     font-size: 2.5rem;
-    flex-basis: 50%;
+
     @include md {
       flex-basis: 30%;
     }
@@ -169,9 +177,9 @@
     padding-left: 30%;
 
     @include md {
-      padding-left: 20px;
-      padding-right: 40px;
       max-width: 60%;
+      padding-right: 40px;
+      padding-left: 20px;
     }
   }
   &__link {

@@ -57,6 +57,7 @@ class Header {
     this.navBarListLinksOpen.classList.remove('open-list');
   }
 
+  /*---when i didn't know about window scroll---*/
   _pageWatch() {
     let y = this.nextElem.getBoundingClientRect();
     if (y.y) return true;

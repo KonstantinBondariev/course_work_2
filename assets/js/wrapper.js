@@ -44,6 +44,8 @@ class Wrapper {
     this.initHeaderMenu.init();
     this.initSlider.init();
     this.initStyle.init();
+
+    /*---when i didn't know about EventListener resize---*/
     // this.watch = setInterval(() => {
     //   this._watchBodySize();
     //   this._chageWrapper();
